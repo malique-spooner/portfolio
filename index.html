@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b100d">
+  <meta name="description" content="Malique Spooner is a London-based computer science student building digital products with software, data and product thinking.">
+  <title>Malique Spooner — Computer Science & Digital Products</title>
+  <style>
+    :root{color-scheme:dark;--ink:#0b100d;--paper:#d9d8cb;--red:#a52d28;--muted:#aaa99e;--line:#d9d8cb38}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--ink);color:var(--paper);font-family:Inter,Arial,sans-serif}
+    a{color:inherit}
+    .wrap{width:min(1240px,calc(100% - 64px));margin:auto}
+    header{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);font-size:11px;font-weight:750;letter-spacing:.13em}
+    header a{text-decoration:none}
+    header nav{display:flex;gap:28px;color:var(--muted)}
+    header nav a:hover{color:var(--paper)}
+    .hero{min-height:590px;display:grid;align-content:center;padding:95px 0 110px;position:relative}
+    .eyebrow,.kicker{font-size:11px;font-weight:750;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+    h1{font:clamp(64px,10vw,132px)/.88 Georgia,serif;font-weight:400;letter-spacing:-.065em;margin:34px 0 28px;max-width:950px}
+    h1 em{color:var(--red);font-weight:400}
+    .intro{max-width:610px;color:#d0cfc4;font-size:clamp(17px,2vw,21px);line-height:1.6;margin:0}
+    .hero-links{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+    .button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border:1px solid var(--line);border-radius:2px;text-decoration:none;font-size:12px;font-weight:750;letter-spacing:.08em;text-transform:uppercase;transition:background .2s,color .2s,border .2s}
+    .button.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+    .button:hover{background:var(--red);border-color:var(--red);color:white}
+    .location{position:absolute;right:0;bottom:48px;color:var(--muted);font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+    .work{padding:38px 0 92px;border-top:1px solid var(--line)}
+    .work-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:24px}
+    .work-head h2{font:clamp(34px,5vw,56px)/1 Georgia,serif;font-weight:400;letter-spacing:-.05em;margin:10px 0 0}
+    .work-head p{max-width:290px;color:var(--muted);font-size:13px;line-height:1.5;margin:0}
+    .project{display:grid;grid-template-columns:64px minmax(0,1fr) auto;align-items:center;gap:22px;border-top:1px solid var(--line);padding:27px 0}
+    .number{color:var(--red);font:16px Georgia,serif}
+    .project h3{font:clamp(28px,4vw,46px)/1 Georgia,serif;font-weight:400;letter-spacing:-.045em;margin:0 0 8px}
+    .project p{font-size:14px;line-height:1.6;color:var(--muted);margin:0;max-width:660px}
+    .project .button{white-space:nowrap}
+    .project .sub-link{grid-column:2/-1;margin-top:-8px;color:var(--muted);font-size:11px;letter-spacing:.08em;text-decoration:none;text-transform:uppercase}
+    .project .sub-link:hover{color:var(--paper)}
+    footer{border-top:1px solid var(--line);padding:24px 0 34px;display:flex;justify-content:space-between;gap:16px;color:var(--muted);font-size:11px;letter-spacing:.08em}
+    footer a{text-decoration:none}
+    @media(max-width:680px){.wrap{width:calc(100% - 36px)}header{height:66px}header nav{gap:14px}.hero{min-height:530px;padding:74px 0 95px}.location{bottom:30px}.work-head{display:block}.work-head p{margin-top:14px}.project{grid-template-columns:32px minmax(0,1fr);gap:12px;padding:22px 0}.project .button{grid-column:2;justify-self:start;margin-top:4px}.project .sub-link{grid-column:2;margin-top:0}footer{display:block;line-height:2}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header><a href="/">MALIQUE SPOONER</a><nav aria-label="Main navigation"><a href="#work">Work</a><a href="mailto:maliquespooner@gmail.com">Contact</a></nav></header>
+    <section class="hero" aria-labelledby="intro-title">
+      <span class="eyebrow">COMPUTER SCIENCE · DATA · DIGITAL PRODUCTS</span>
+      <h1 id="intro-title">I’m Malique.<br><em>I make useful things.</em></h1>
+      <p class="intro">I’m a London-based Computer Science student interested in how software and data can solve practical problems. Here are a few projects I’ve built.</p>
+      <div class="hero-links"><a class="button primary" href="#work">Explore my work ↓</a><a class="button" href="mailto:maliquespooner@gmail.com">Get in touch ↗</a></div>
+      <span class="location">London, United Kingdom</span>
+    </section>
+    <section class="work" id="work" aria-labelledby="work-title">
+      <div class="work-head"><div><span class="kicker">SELECTED PROJECTS</span><h2 id="work-title">Things I’ve made</h2></div><p>A mix of product experiments, data storytelling and software projects.</p></div>
+      <article class="project"><span class="number">01</span><div><h3>Night Economy</h3><p>A pricing and discovery concept for hospitality, connecting a live market view with a venue ordering experience.</p></div><a class="button primary" href="/night/tv/public-demo/">Open TV market ↗</a><a class="sub-link" href="/night/menu/public-demo/">Open mobile market ↗</a></article>
+      <article class="project"><span class="number">02</span><div><h3>Ten Year Wrapped</h3><p>An interactive story exploring a decade of listening through patterns, standout songs and yearly changes.</p></div><a class="button" href="/wrapped/">Explore the story ↗</a></article>
+      <article class="project"><span class="number">03</span><div><h3>Agri Platform</h3><p>A university project exploring how digital records could improve coordination and traceability in coffee supply chains.</p></div><a class="button" href="/agri/">Open project ↗</a><a class="sub-link" href="https://github.com/malique-spooner/agri-platform" target="_blank" rel="noreferrer">View source on GitHub ↗</a></article>
+    </section>
+    <footer><span>© 2026 MALIQUE SPOONER</span><span><a href="mailto:maliquespooner@gmail.com">maliquespooner@gmail.com</a> · London</span></footer>
+  </main>
+</body>
+</html>
