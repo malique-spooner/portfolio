@@ -1,2 +1,11 @@
-# maliquespooner.com
-Personal portfolio for Malique Spooner — software, data and digital product projects.
+# Malique Spooner — Portfolio
+
+Source for the personal portfolio at [maliquespooner.com](https://maliquespooner.com/).
+
+The site presents Malique as a Computer Science student and product builder, with public links to Night Economy, Ten Year Wrapped, and the Agri Platform.
+
+## Run locally
+
+Open `index.html` in a browser. The current site is a self-contained static page and has no build step.
+
+This repository contains only the portfolio website source and documentation. Keep private work files, CVs, credentials, and raw listening history out of this repository.
