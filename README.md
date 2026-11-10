@@ -4,6 +4,10 @@ Source for the personal portfolio at [maliquespooner.com](https://maliquespooner
 
 The site presents Malique as a Computer Science student and product builder, with public links to Night Economy, Ten Year Wrapped, and the Agri Platform.
 
+## Interactive hero
+
+The landing page uses a custom WebGL point cloud to render the name in perspective. Pointer movement tilts the point field, and scrolling moves it out of view as the project story begins. The interaction respects reduced-motion preferences and falls back to a readable text title when WebGL is unavailable.
+
 ## Run locally
 
 Open `index.html` in a browser. The current site is a self-contained static page and has no build step.
