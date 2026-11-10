@@ -9,3 +9,6 @@ The site presents Malique as a Computer Science student and product builder, wit
 Open `index.html` in a browser. The current site is a self-contained static page and has no build step.
 
 This repository contains only the portfolio website source and documentation. Keep private work files, CVs, credentials, and raw listening history out of this repository.
+## Nike film
+
+The portfolio includes a web-optimized 1080p export of the independent football concept film “Joy is the Game.” The Premiere Pro project contains a poem audio track, piano music, and a 16:9 sequence; the edit moves through football play and shared celebrations. The original 4K export is kept locally in `media/nike/source/` and excluded from Git; the optimized public MP4 and poster are included under `media/nike/`. The film is a speculative concept and is not affiliated with or commissioned by Nike.
