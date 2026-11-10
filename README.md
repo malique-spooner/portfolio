@@ -6,7 +6,7 @@ The site presents Malique as a Computer Science student and product builder, wit
 
 ## Interactive hero
 
-The landing page uses a custom WebGL point cloud to render the name in perspective. The name flies forward into view on entry; the cursor pushes nearby points away like opposing magnets. Pointer movement also tilts the field, and scrolling carries it out of view as the project story begins. The interaction respects reduced-motion preferences and falls back to a readable text title when WebGL is unavailable.
+The landing page uses a custom WebGL point cloud to render the name in perspective. The name is assembled from particles that fly in from outside the viewport on entry; the cursor pushes nearby points away like opposing magnets. Pointer movement also tilts the field, and scrolling carries it out of view as the project story begins. The interaction respects reduced-motion preferences and falls back to a readable text title when WebGL is unavailable.
 
 ## Run locally
 
