@@ -8,9 +8,9 @@
   <title>Malique Spooner</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{color-scheme:dark;--bg:#0b100d;--paper:#d9d8cb;--red:#a52d28;--muted:#9b9b92;--line:#d9d8cb30;--mono:'DM Mono',monospace;--sans:'DM Sans',Arial,sans-serif}
+    :root{color-scheme:dark;--bg:#0b100d;--paper:#d9d8cb;--red:#a52d28;--muted:#9b9b92;--line:#d9d8cb30;--mono:'DM Mono',monospace;--sans:'DM Sans',Arial,sans-serif;--display:'Space Grotesk','DM Sans',Arial,sans-serif}
     *{box-sizing:border-box}
     html,body{width:100%;height:100%;margin:0}
     body{overflow:hidden;background:var(--bg);color:var(--paper);font-family:var(--sans);}
@@ -27,7 +27,7 @@
     .links a:hover,.links a:focus-visible{background:var(--paper);border-color:var(--paper);color:var(--bg);transform:translateY(-3px);outline:none}
     .links a:hover span,.links a:focus-visible span{color:var(--red);transform:translate(2px,-2px)}
     .links a:focus-visible{box-shadow:0 0 0 3px var(--bg),0 0 0 5px var(--paper)}
-    .no-webgl .fallback-name{display:block;position:absolute;top:36%;left:50%;transform:translate(-50%,-50%);color:var(--paper);font:700 clamp(60px,15vw,190px)/.8 var(--sans);letter-spacing:-.1em;white-space:nowrap}
+    .no-webgl .fallback-name{display:block;position:absolute;top:36%;left:50%;transform:translate(-50%,-50%);color:var(--paper);font:600 clamp(60px,15vw,190px)/.88 var(--display);letter-spacing:-.075em;white-space:nowrap}
     @media(max-width:640px){.landing{padding:20px 20px 0}.links{bottom:max(32px,env(safe-area-inset-bottom));width:calc(100% - 40px);gap:9px}.links a{min-width:0;min-height:48px;flex:1;padding:0 12px;gap:8px;font-size:13px;white-space:nowrap}.no-webgl .fallback-name{top:38%;font-size:clamp(64px,20vw,112px)}}
     @media(max-height:560px) and (min-width:641px){.links{bottom:26px}.links a{min-height:48px}}
     @media(prefers-reduced-motion:reduce){.links a,.links a span{transition:none}}
@@ -45,7 +45,7 @@
     </nav>
   </main>
   <script>
-    (()=>{
+    (async()=>{
       const canvas=document.getElementById('scene');
       const gl=canvas.getContext('webgl',{alpha:true,antialias:true});
       if(!gl){document.body.classList.add('no-webgl');return}
@@ -60,7 +60,8 @@
       const position=gl.getAttribLocation(program,'p'),seedLoc=gl.getAttribLocation(program,'seed');
       const res=gl.getUniformLocation(program,'resolution'),turn=gl.getUniformLocation(program,'turn'),magnet=gl.getUniformLocation(program,'magnet'),clock=gl.getUniformLocation(program,'clock');
       const source=document.createElement('canvas'),ctx=source.getContext('2d',{willReadFrequently:true});source.width=1800;source.height=700;
-      ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle='#fff';ctx.font='700 320px Arial, sans-serif';ctx.letterSpacing='-15px';ctx.fillText('MALIQUE',900,350);
+      await document.fonts.load('600 320px "Space Grotesk"').catch(()=>[]);
+      ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillStyle='#fff';ctx.font='600 320px "Space Grotesk", sans-serif';ctx.letterSpacing='-10px';ctx.fillText('MALIQUE',900,350);
       const data=ctx.getImageData(0,0,source.width,source.height).data,points=[],seeds=[];
       for(let y=0;y<source.height;y+=5)for(let x=0;x<source.width;x+=5){if(data[(y*source.width+x)*4+3]>100){const nx=(x/source.width-.5)*2.18,ny=(.5-y/source.height)*1.3,random=Math.sin(x*12.9898+y*78.233)*43758.5453,seed=random-Math.floor(random);points.push(nx,ny,(seed-.5)*.18);seeds.push(seed)}}
       const pbuf=gl.createBuffer(),sbuf=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,pbuf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(points),gl.STATIC_DRAW);gl.enableVertexAttribArray(position);gl.vertexAttribPointer(position,3,gl.FLOAT,false,0,0);gl.bindBuffer(gl.ARRAY_BUFFER,sbuf);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(seeds),gl.STATIC_DRAW);gl.enableVertexAttribArray(seedLoc);gl.vertexAttribPointer(seedLoc,1,gl.FLOAT,false,0,0);
