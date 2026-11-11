@@ -17,7 +17,9 @@
     ::selection{background:var(--red);color:#fff}
     .grain{position:fixed;inset:0;z-index:4;pointer-events:none;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E")}
     .scene{position:fixed;inset:0;z-index:0;pointer-events:none}
-    .scene canvas{display:block;width:100%;height:100%}
+    .scene canvas{display:block;width:100%;height:100%;will-change:transform,filter;transition:filter .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+    body[data-project="night"] .scene canvas{filter:saturate(1.25) hue-rotate(-12deg);transform:scale(1.014) translateY(-2px)}
+    body[data-project="agri"] .scene canvas{filter:hue-rotate(95deg) saturate(1.12);transform:scale(1.014) translateY(-2px)}
     .landing{position:relative;z-index:2;display:grid;place-items:center;width:100%;height:100svh;padding:32px 6vw 0}
     .name{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
     .fallback-name{display:none}
@@ -30,7 +32,7 @@
     .no-webgl .fallback-name{display:block;position:absolute;top:36%;left:50%;transform:translate(-50%,-50%);color:var(--paper);font:600 clamp(60px,15vw,190px)/.88 var(--display);letter-spacing:-.075em;white-space:nowrap}
     @media(max-width:640px){.landing{padding:20px 20px 0}.links{bottom:max(32px,env(safe-area-inset-bottom));width:calc(100% - 40px);gap:9px}.links a{min-width:0;min-height:48px;flex:1;padding:0 12px;gap:8px;font-size:13px;white-space:nowrap}.no-webgl .fallback-name{top:38%;font-size:clamp(64px,20vw,112px)}}
     @media(max-height:560px) and (min-width:641px){.links{bottom:26px}.links a{min-height:48px}}
-    @media(prefers-reduced-motion:reduce){.links a,.links a span{transition:none}}
+    @media(prefers-reduced-motion:reduce){.links a,.links a span,.scene canvas{transition:none}}
   </style>
 </head>
 <body>
@@ -46,6 +48,7 @@
   </main>
   <script>
     (async()=>{
+      document.querySelectorAll('.links a').forEach((link,index)=>{const activate=()=>document.body.dataset.project=index===0?'night':'agri',clear=()=>delete document.body.dataset.project;link.addEventListener('pointerenter',activate);link.addEventListener('pointerleave',clear);link.addEventListener('focus',activate);link.addEventListener('blur',clear)});
       const canvas=document.getElementById('scene');
       const gl=canvas.getContext('webgl',{alpha:true,antialias:true});
       if(!gl){document.body.classList.add('no-webgl');return}
