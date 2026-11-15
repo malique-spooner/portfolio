@@ -2,7 +2,13 @@
 
 Source for the personal portfolio at [maliquespooner.com](https://maliquespooner.com/).
 
-The site presents Malique as a Computer Science student and product builder, with public links to Night Economy, Ten Year Wrapped, and the Agri Platform.
+The site presents Malique as a Computer Science student and product builder, with public links to Night Economy, the Agri Platform, and Fantasy 5.
+
+## Selected projects
+
+- **Night Economy** — hospitality pricing concept with public venue, market, and mobile-menu demos.
+- **Agri Platform** — synthetic-data prototype for coffee farm records, buyer demand, and export-lot coordination.
+- **Fantasy 5** — phone-first five-a-side fantasy football concept and scoring model.
 
 ## Interactive hero
 

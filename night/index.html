@@ -24,23 +24,19 @@
   <main class="wrap">
     <header><a class="brand" href="/"><i aria-hidden="true">NE</i> NIGHT ECONOMY</a><a class="back" href="/">← Malique Spooner</a></header>
     <section class="hero" aria-labelledby="title">
-      <div><p class="eyebrow"><i aria-hidden="true"></i> AN INTERACTIVE PRODUCT CONCEPT</p><h1 id="title">A night out,<br><em>in motion.</em></h1><p class="intro">A hospitality pricing concept exploring how drink prices can respond to demand, while giving guests a more engaging way to discover the menu.</p><a class="primary" href="/night/public-demo/">Explore the interactive portal <b aria-hidden="true">→</b></a><p class="note">Public demo · venue and market activity are simulated</p></div>
+      <div><p class="eyebrow"><i aria-hidden="true"></i> AN INTERACTIVE PRODUCT CONCEPT</p><h1 id="title">A night out,<br><em>in motion.</em></h1><p class="intro">A hospitality pricing concept exploring how drink prices can respond to demand, while giving guests a more engaging way to discover the menu.</p><a class="primary" href="https://night-economy.pages.dev/public-demo/">Open the public demo <b aria-hidden="true">→</b></a><p class="note">No sign-in required · live market is simulated · controls are read-only</p></div>
       <div class="market-card">
-        <div class="market-card-head"><span>PUBLIC MARKET · SHORT LOOP</span><a href="/night/tv/public-demo/">LIVE MARKET ↗</a></div>
-        <div class="market-card-screen"><video class="market-loop" muted loop playsinline preload="metadata" poster="/night/media/market-loop-poster.jpg" aria-label="A short silent loop of the Night Economy public market"><source src="/night/media/market-loop.mp4" type="video/mp4"></video></div>
-        <div class="market-card-foot"><span>SIMULATED MARKET ACTIVITY</span><a href="/night/tv/public-demo/">Open live screen ↗</a></div>
+        <div class="market-card-head"><span>PUBLIC DEMO · SCREENSHOT</span><a href="https://night-economy.pages.dev/tv/public-demo/">LIVE MARKET ↗</a></div>
+        <div class="market-card-screen"><img class="market-loop" src="/night/media/market-loop-poster.jpg" alt="Screenshot of the Night Economy live drinks market"></div>
+        <div class="market-card-foot"><span>SIMULATED MARKET · SCREENSHOT</span><a href="https://night-economy.pages.dev/tv/public-demo/">Open live market ↗</a></div>
       </div>
     </section>
-    <nav class="explore" aria-label="Explore the Night Economy demo">
-      <a href="/night/public-demo/"><span class="label">01 / OPERATE</span><strong>Interactive portal</strong><small>Explore the venue dashboard, drinks and market controls.</small><b aria-hidden="true">↗</b></a>
-      <a href="/night/tv/public-demo/"><span class="label">02 / WATCH</span><strong>Live market</strong><small>See the public market display and simulated price changes.</small><b aria-hidden="true">↗</b></a>
-      <a href="/night/menu/public-demo/"><span class="label">03 / EXPERIENCE</span><strong>Mobile menu</strong><small>Browse the guest-facing menu in a phone-sized view.</small><b aria-hidden="true">↗</b></a>
+    <nav class="explore" aria-label="Explore the Night Economy public demos">
+      <a href="https://night-economy.pages.dev/public-demo/"><span class="label">01 / OPERATE</span><strong>Read-only venue demo</strong><small>See the venue dashboard and simulated live market.</small><b aria-hidden="true">↗</b></a>
+      <a href="https://night-economy.pages.dev/tv/public-demo/"><span class="label">02 / WATCH</span><strong>Live market</strong><small>See simulated price changes on the public market display.</small><b aria-hidden="true">↗</b></a>
+      <a href="https://night-economy.pages.dev/menu/public-demo/"><span class="label">03 / EXPERIENCE</span><strong>Mobile menu</strong><small>Browse the guest menu on your phone or computer.</small><b aria-hidden="true">↗</b></a>
     </nav>
     <footer><span class="footer-brand">DESIGNED AND BUILT BY MALIQUE SPOONER</span><span>PROJECT CONCEPT · MARKET DATA IS SIMULATED</span></footer>
   </main>
-  <script>
-    const preview = document.querySelector('.market-loop');
-    if (preview && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) preview.play().catch(() => {});
-  </script>
 </body>
 </html>

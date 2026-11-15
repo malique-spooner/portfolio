@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b100d">
-  <meta name="description" content="Malique Spooner — Computer Science student and product builder. Explore Night Economy and Agri Platform.">
+  <meta name="description" content="Malique Spooner — Computer Science student and product builder. Explore Night Economy, Agri Platform, and Fantasy 5.">
   <title>Malique Spooner</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +25,7 @@
     .fallback-name{display:none}
     .descriptor{position:absolute;left:50%;top:68%;transform:translateX(-50%);margin:0;color:var(--muted);font:10px var(--mono);letter-spacing:.13em;text-transform:uppercase;white-space:nowrap;opacity:0;animation:descriptor-in .7s ease 2.6s forwards}
     @keyframes descriptor-in{to{opacity:1}}
-    .links{position:absolute;left:50%;bottom:clamp(98px,14vh,124px);transform:translateX(-50%);display:flex;align-items:center;justify-content:center;gap:14px;width:min(100%,560px)}
+    .links{position:absolute;left:50%;bottom:clamp(98px,14vh,124px);transform:translateX(-50%);display:flex;align-items:center;justify-content:center;gap:14px;width:min(100%,820px)}
     .links a{min-height:54px;flex:0 1 240px;display:flex;align-items:center;justify-content:center;gap:12px;padding:0 24px;border:1px solid var(--line);border-radius:999px;background:#d9d8cb06;color:var(--paper);text-decoration:none;font:500 14px var(--sans);letter-spacing:.01em;transition:background .25s ease,border-color .25s ease,color .25s ease,transform .25s ease}
     .links a span{color:var(--red);font:12px var(--mono);transition:transform .25s ease}
     .links a:hover,.links a:focus-visible{background:var(--paper);border-color:var(--paper);color:var(--bg);transform:translateY(-3px);outline:none}
@@ -37,7 +37,8 @@
     .socials a:focus-visible{box-shadow:0 0 0 2px var(--paper);border-radius:3px}
     .socials svg{display:block;width:19px;height:19px}
     .no-webgl .fallback-name{display:block;position:absolute;top:36%;left:50%;transform:translate(-50%,-50%);color:var(--paper);font:600 clamp(60px,15vw,190px)/.88 var(--display);letter-spacing:-.075em;white-space:nowrap}
-    @media(max-width:640px){.landing{padding:20px 20px 0}.descriptor{top:66%;font-size:9px;letter-spacing:.11em}.links{bottom:calc(max(32px,env(safe-area-inset-bottom)) + 88px);width:calc(100% - 40px);gap:9px}.links a{min-width:0;min-height:48px;flex:1;padding:0 12px;gap:8px;font-size:13px;white-space:nowrap}.socials{min-height:72px;gap:18px;padding-left:20px;padding-right:20px}.no-webgl .fallback-name{top:38%;font-size:clamp(64px,20vw,112px)}}
+    @media(max-width:760px){.links{flex-wrap:wrap;width:calc(100% - 20px);gap:6px}.links a{flex:1 1 30%;padding:0 6px;font-size:10px}}
+    @media(max-width:640px){.landing{padding:20px 20px 0}.descriptor{top:66%;font-size:9px;letter-spacing:.11em}.links{bottom:calc(max(32px,env(safe-area-inset-bottom)) + 88px);width:calc(100% - 20px);gap:6px}.links a{min-width:0;min-height:48px;flex:1 1 30%;padding:0 6px;gap:4px;font-size:10px;white-space:nowrap}.socials{min-height:72px;gap:18px;padding-left:20px;padding-right:20px}.no-webgl .fallback-name{top:38%;font-size:clamp(64px,20vw,112px)}}
     @media(max-height:560px) and (min-width:641px){.descriptor{top:58%}.links{bottom:70px}.links a{min-height:48px}.socials{bottom:8px;padding-top:7px}}
     @media(pointer:coarse){.socials a{width:48px;height:48px}}
     @media(max-height:560px) and (min-width:641px) and (pointer:coarse){.descriptor{top:56%}.links{bottom:90px}.socials{bottom:max(10px,env(safe-area-inset-bottom))}}
@@ -56,6 +57,7 @@
     <nav class="links" aria-label="Selected work">
       <a href="/night/">Night Economy <span aria-hidden="true">↗</span></a>
       <a href="/projects/agri/">Agri Platform <span aria-hidden="true">↗</span></a>
+      <a href="/projects/fantasy-5/">Fantasy 5 <span aria-hidden="true">↗</span></a>
     </nav>
     <footer class="socials" aria-label="Social profiles">
       <a href="https://www.linkedin.com/in/maliquespooner" target="_blank" rel="noreferrer" aria-label="Malique Spooner on LinkedIn">
