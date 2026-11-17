@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b100d">
-  <meta name="description" content="Malique Spooner — Computer Science student and product builder. Explore Night Economy, Agri Platform, and Fantasy 5.">
+  <meta name="description" content="Malique Spooner — Computer Science student and product builder. Explore Night Economy, Agri Platform, and Fantasy Live.">
   <title>Malique Spooner</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,10 +26,10 @@
     .descriptor{position:absolute;left:50%;top:68%;transform:translateX(-50%);margin:0;color:var(--muted);font:10px var(--mono);letter-spacing:.13em;text-transform:uppercase;white-space:nowrap;opacity:0;animation:descriptor-in .7s ease 2.6s forwards}
     @keyframes descriptor-in{to{opacity:1}}
     .links{position:absolute;left:50%;bottom:clamp(98px,14vh,124px);transform:translateX(-50%);display:flex;align-items:center;justify-content:center;gap:14px;width:min(100%,820px)}
-    .links a{min-height:54px;flex:0 1 240px;display:flex;align-items:center;justify-content:center;gap:12px;padding:0 24px;border:1px solid var(--line);border-radius:999px;background:#d9d8cb06;color:var(--paper);text-decoration:none;font:500 14px var(--sans);letter-spacing:.01em;transition:background .25s ease,border-color .25s ease,color .25s ease,transform .25s ease}
-    .links a span{color:var(--red);font:12px var(--mono);transition:transform .25s ease}
+    .links a{position:relative;min-height:68px;flex:0 1 240px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:10px 28px 10px 12px;border:1px solid var(--line);border-radius:22px;background:#d9d8cb06;color:var(--paper);text-decoration:none;transition:background .25s ease,border-color .25s ease,color .25s ease,transform .25s ease}
+    .project-name{font:500 14px var(--sans);letter-spacing:.01em}.project-status{color:var(--muted);font:8px var(--mono);letter-spacing:.035em;text-transform:uppercase;white-space:nowrap}.links a .arrow{position:absolute;right:13px;top:50%;transform:translateY(-50%);color:var(--red);font:12px var(--mono);transition:transform .25s ease}
     .links a:hover,.links a:focus-visible{background:var(--paper);border-color:var(--paper);color:var(--bg);transform:translateY(-3px);outline:none}
-    .links a:hover span,.links a:focus-visible span{color:var(--red);transform:translate(2px,-2px)}
+    .links a:hover .arrow,.links a:focus-visible .arrow{color:var(--red);transform:translate(2px,calc(-50% - 2px))}
     .links a:focus-visible{box-shadow:0 0 0 3px var(--bg),0 0 0 5px var(--paper)}
     .socials{position:absolute;left:0;right:0;bottom:0;min-height:76px;padding:10px 24px max(10px,env(safe-area-inset-bottom));display:flex;align-items:center;justify-content:center;gap:14px;border-top:1px solid var(--line);background:linear-gradient(180deg,#0b100d00,#0b100d66);}
     .socials a{display:grid;place-items:center;width:44px;height:44px;border:1px solid transparent;border-radius:50%;color:var(--muted);transition:color .2s ease,transform .2s ease,border-color .2s ease,background .2s ease}
@@ -37,8 +37,8 @@
     .socials a:focus-visible{box-shadow:0 0 0 2px var(--paper);border-radius:3px}
     .socials svg{display:block;width:19px;height:19px}
     .no-webgl .fallback-name{display:block;position:absolute;top:36%;left:50%;transform:translate(-50%,-50%);color:var(--paper);font:600 clamp(60px,15vw,190px)/.88 var(--display);letter-spacing:-.075em;white-space:nowrap}
-    @media(max-width:760px){.links{flex-wrap:wrap;width:calc(100% - 20px);gap:6px}.links a{flex:1 1 30%;padding:0 6px;font-size:10px}}
-    @media(max-width:640px){.landing{padding:20px 20px 0}.descriptor{top:66%;font-size:9px;letter-spacing:.11em}.links{bottom:calc(max(32px,env(safe-area-inset-bottom)) + 88px);width:calc(100% - 20px);gap:6px}.links a{min-width:0;min-height:48px;flex:1 1 30%;padding:0 6px;gap:4px;font-size:10px;white-space:nowrap}.socials{min-height:72px;gap:18px;padding-left:20px;padding-right:20px}.no-webgl .fallback-name{top:38%;font-size:clamp(64px,20vw,112px)}}
+    @media(max-width:760px){.links{flex-wrap:wrap;width:calc(100% - 20px);gap:6px}.links a{flex:1 1 30%;padding:8px 18px 8px 6px}.project-name{font-size:10px}.project-status{font-size:7px;letter-spacing:0}}
+    @media(max-width:640px){.landing{padding:20px 20px 0}.descriptor{top:66%;font-size:9px;letter-spacing:.11em}.links{bottom:calc(max(32px,env(safe-area-inset-bottom)) + 88px);width:calc(100% - 20px);gap:6px}.links a{min-width:0;min-height:56px;flex:1 1 30%;padding:7px 15px 7px 5px;gap:3px;white-space:nowrap;border-radius:16px}.project-name{font-size:9px}.project-status{font-size:6px}.links a .arrow{right:6px;font-size:10px}.socials{min-height:72px;gap:18px;padding-left:20px;padding-right:20px}.no-webgl .fallback-name{top:38%;font-size:clamp(64px,20vw,112px)}}
     @media(max-height:560px) and (min-width:641px){.descriptor{top:58%}.links{bottom:70px}.links a{min-height:48px}.socials{bottom:8px;padding-top:7px}}
     @media(pointer:coarse){.socials a{width:48px;height:48px}}
     @media(max-height:560px) and (min-width:641px) and (pointer:coarse){.descriptor{top:56%}.links{bottom:90px}.socials{bottom:max(10px,env(safe-area-inset-bottom))}}
@@ -55,9 +55,9 @@
     <p class="fallback-name" aria-hidden="true">Malique</p>
     <p class="descriptor">Computer Science · Software · Data</p>
     <nav class="links" aria-label="Selected work">
-      <a href="/night/">Night Economy <span aria-hidden="true">↗</span></a>
-      <a href="/projects/agri/">Agri Platform <span aria-hidden="true">↗</span></a>
-      <a href="/projects/fantasy-5/">Fantasy 5 <span aria-hidden="true">↗</span></a>
+      <a href="/night/"><strong class="project-name">Night Economy</strong><small class="project-status">Portal · TV view · Mobile view</small><span class="arrow" aria-hidden="true">↗</span></a>
+      <a href="/projects/agri/"><strong class="project-name">Agri Platform</strong><small class="project-status">Public demo · Read-only</small><span class="arrow" aria-hidden="true">↗</span></a>
+      <a href="/projects/fantasy-5/"><strong class="project-name">Fantasy Live</strong><small class="project-status">Explore the idea</small><span class="arrow" aria-hidden="true">↗</span></a>
     </nav>
     <footer class="socials" aria-label="Social profiles">
       <a href="https://www.linkedin.com/in/maliquespooner" target="_blank" rel="noreferrer" aria-label="Malique Spooner on LinkedIn">
