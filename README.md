@@ -2,13 +2,13 @@
 
 Source for the personal portfolio at [maliquespooner.com](https://maliquespooner.com/).
 
-The site presents Malique as a Computer Science student and product builder, with public links to Night Economy, the Agri Platform, and Fantasy 5.
+The site presents Malique as a Computer Science student and product builder, with project landings for Night Economy, Origin & Acre, and Fantasy Live.
 
 ## Selected projects
 
-- **Night Economy** — hospitality pricing concept with public venue, market, and mobile-menu demos.
-- **Agri Platform** — synthetic-data prototype for coffee farm records, buyer demand, and export-lot coordination.
-- **Fantasy 5** — phone-first five-a-side fantasy football concept and scoring model.
+- **Night Economy** — hospitality pricing concept with public, no-sign-in venue and market demos, plus a guest-facing mobile menu.
+- **Origin & Acre** — public read-only coffee supply demo using synthetic records, with farm search, buyer pledges, and export-lot coordination.
+- **Fantasy Live** — information page for a phone-first five-a-side fantasy football concept and scoring model; a working demo is not available yet.
 
 ## Interactive hero
 
@@ -16,7 +16,7 @@ The landing page uses a custom WebGL point cloud to render the name in perspecti
 
 ## Run locally
 
-Open `index.html` in a browser. The current site is a self-contained static page and has no build step.
+Open `index.html` in a browser. The main portfolio is self-contained; project pages live at `/Night-Economy/`, `/Origin-Acre/`, and `/Fantasy-Live/`. Earlier project URLs forward to these canonical pages.
 
 This repository contains only the portfolio website source and documentation. Keep private work files, CVs, credentials, and raw listening history out of this repository.
 ## Nike film
