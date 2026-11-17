@@ -18,6 +18,10 @@ The landing page uses a custom WebGL point cloud to render the name in perspecti
 
 Open `index.html` in a browser. The main portfolio is self-contained; project pages live at `/Night-Economy/`, `/Origin-Acre/`, and `/Fantasy-Live/`. Earlier project URLs forward to these canonical pages.
 
+## Publish to Cloudflare
+
+Build the static site bundle with `python3 scripts/build_site_assets.py`, then publish it with `wrangler deploy --config wrangler.jsonc`. App URLs use more-specific Worker routes and keep their own deployments.
+
 This repository contains only the portfolio website source and documentation. Keep private work files, CVs, credentials, and raw listening history out of this repository.
 ## Nike film
 
