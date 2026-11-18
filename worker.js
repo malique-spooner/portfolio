@@ -12,6 +12,11 @@ export default {
     if (destination) {
       return Response.redirect(new URL(`${destination}${incoming.search}`, incoming), 301);
     }
-    return env.ASSETS.fetch(request);
+    const response = await env.ASSETS.fetch(request);
+    if (!response.headers.get("content-type")?.includes("text/html")) return response;
+
+    const headers = new Headers(response.headers);
+    headers.set("Cache-Control", "no-store, max-age=0");
+    return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
   },
 };
